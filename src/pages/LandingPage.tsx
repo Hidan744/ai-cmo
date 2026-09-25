@@ -119,7 +119,7 @@ export function LandingPage() {
 
           <div className="flex items-center gap-2 shrink-0">
             <Button size="sm" variant="ghost" asChild>
-              <Link to="/app/dashboard">Войти</Link>
+              <Link to="/auth">Войти</Link>
             </Button>
             <Button size="sm" className="rounded-full btn-aurora-glow text-ink-50 shadow-none" asChild>
               <Link to="/onboarding">Начать бесплатно</Link>

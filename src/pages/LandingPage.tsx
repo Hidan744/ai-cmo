@@ -95,18 +95,32 @@ export function LandingPage() {
           </div>
 
           <nav className="hidden md:flex items-center gap-0.5 rounded-full border border-ink-800 bg-white/[0.03] backdrop-blur-md p-1.5">
-            {NAV_LINKS.map((l) => (
-              <a
-                key={l.href}
-                href={l.href}
-                className="text-sm font-medium text-ink-300 hover:text-ink-50 hover:bg-white/[0.06] rounded-full px-4 py-2 transition-colors"
-              >
-                {l.label}
-              </a>
-            ))}
+            {NAV_LINKS.map((l) =>
+              l.href === '#demo' ? (
+                <button
+                  key={l.href}
+                  type="button"
+                  onClick={handleDemo}
+                  className="text-sm font-medium text-ink-300 hover:text-ink-50 hover:bg-white/[0.06] rounded-full px-4 py-2 transition-colors"
+                >
+                  {l.label}
+                </button>
+              ) : (
+                <a
+                  key={l.href}
+                  href={l.href}
+                  className="text-sm font-medium text-ink-300 hover:text-ink-50 hover:bg-white/[0.06] rounded-full px-4 py-2 transition-colors"
+                >
+                  {l.label}
+                </a>
+              ),
+            )}
           </nav>
 
           <div className="flex items-center gap-2 shrink-0">
+            <Button size="sm" variant="ghost" asChild>
+              <Link to="/app/dashboard">Войти</Link>
+            </Button>
             <Button size="sm" className="rounded-full btn-aurora-glow text-ink-50 shadow-none" asChild>
               <Link to="/onboarding">Начать бесплатно</Link>
             </Button>

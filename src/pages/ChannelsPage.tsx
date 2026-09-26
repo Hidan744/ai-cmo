@@ -30,7 +30,7 @@ export function ChannelsPage() {
             <XAxis dataKey="name" tick={{ fill: CHART_CHROME.mutedInk, fontSize: 12 }} axisLine={{ stroke: CHART_CHROME.axis }} tickLine={false} />
             <YAxis tick={{ fill: CHART_CHROME.mutedInk, fontSize: 11 }} axisLine={false} tickLine={false} tickFormatter={(v) => `${v}%`} width={56} />
             <Tooltip
-              contentStyle={{ background: '#0b1826', border: '1px solid #1f3450', borderRadius: 12, fontSize: 12 }}
+              contentStyle={{ background: '#0c0a08', border: '1px solid #2a221c', borderRadius: 12, fontSize: 12 }}
               formatter={(value) => [`${value}%`, 'ROMI']}
             />
             <Bar dataKey="ROMI" fill={CATEGORICAL.slot7} radius={[6, 6, 0, 0]} isAnimationActive={false} />
